@@ -1,5 +1,3 @@
-# isaacjm03.github.io
-This is my Github portfolio
 # My GitHub Portfolio
 
 Welcome to my GitHub portfolio! Here, you'll find a collection of my projects, code repositories, and contributions. Feel free to explore and see what I've been working on.
