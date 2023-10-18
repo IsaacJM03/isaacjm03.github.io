@@ -75,8 +75,8 @@ a:hover {
 }
 
 .avatar-container {
-    width: 100px; /* Adjust the size as needed */
-    height: 100px; /* Adjust the size as needed */
+    width: 30px; /* Adjust the size as needed */
+    height: 30px; /* Adjust the size as needed */
     overflow: hidden;
     border-radius: 50%; /* Make it circular */
     margin: 0 auto;
