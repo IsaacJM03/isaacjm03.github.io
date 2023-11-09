@@ -4,64 +4,103 @@
     <meta charset="UTF-8">
     <title>My GitHub Portfolio</title>
     <link rel="stylesheet" type="text/css" href="styles.css">
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/vuetify@3.0.5/dist/vuetify.min.css" rel="stylesheet">
 </head>
 <body>
-    <header>
-        <h1>Mwesigwa Isaac's GitHub Portfolio</h1>
-        <p>Welcome to my GitHub portfolio. Explore my projects and contributions.</p>
-    </header>
-    
-    <section id="avatar">
-        <div class="avatar-container">
-            <img src="profile.jpg" alt="My Profile Picture">
-        </div>
-    </section>
+    <div id="app">
+        <v-app>
+            <v-navigation-drawer app>
+            </v-navigation-drawer>
+            <v-app-bar app>
+                <v-app-bar-title>Mwesigwa Isaac's GitHub Portfolio</v-app-bar-title>
+            </v-app-bar>
+            <v-main>
+                <v-container>
+                    <v-row>
+                        <v-col cols="12">
+                            <h1>Mwesigwa Isaac's GitHub Portfolio</h1>
+                            <p>Welcome to my GitHub portfolio. Explore my projects and contributions.</p>
+                        </v-col>
+                    </v-row>
+                    <v-row>
+                        <v-col cols="12" md="4" v-for="project in projects" :key="project.id">
+                            <v-card>
+                                <v-card-title>{{ project.name }}</v-card-title>
+                                <v-card-text>{{ project.description }}</v-card-text>
+                                <v-card-actions>
+                                    <v-btn color="primary" @click="viewRepository(project.link">View Repository</v-btn>
+                                </v-card-actions>
+                            </v-card>
+                        </v-col>
+                    </v-row>
+                    <v-row>
+                        <v-col cols="12">
+                            <h2>Skills</h2>
+                            <ul>
+                                <li>Programming Languages: PHP, Python, JavaScript, C</li>
+                                <li>Web Development: HTML, CSS, JavaScript</li>
+                                <li>Database Management: SQL, MongoDB, SQLite</li>
+                                <li>Frameworks and Libraries: Node.js, Vue 3, Flask</li>
+                                <li>Version Control: Git, GitHub</li>
+                                <li>Data Analysis: Pandas</li>
+                                <li>UI/UX Design: Figma</li>
+                                <li>DevOps, CI/CD: Docker, GitLab</li>
+                                <li>Problem Solving</li>
+                                <li>Team Collaboration</li>
+                                <li>Strong Communication Skills</li>
+                                <li>Continuous Learning</li>
+                            </ul>
+                        </v-col>
+                    </v-row>
+                    <v-row>
+                        <v-col cols="12">
+                            <h2>Contact</h2>
+                            <p>You can reach me via email at <a href="mailto:mwesigwaisaac40@gmail.com">mwesigwaisaac40@gmail.com</a>.</p>
+                            <p>LinkedIn: <a href="https://www.linkedin.com/in/isaac-mwesigwa-10bb0525a/" target="_blank">@isaac mwesigwa</a></p>
+                            <p>Twitter: <a href="https://twitter.com/IsaacJM03" target="_blank">@IsaacJM03</a></p>
+                        </v-col>
+                    </v-row>
+                </v-container>
+            </v-main>
+            <v-footer app>
+            </v-footer>
+        </v-app>
+    </div>
 
-    <section id="projects">
-        <h2>Projects</h2>
-        <ul>
-            <li>
-                <h3>Project 1: Beginner PHP Projects</h3>
-                <p>Description: These are the sample projects I did when I was just getting to learn php.</p>
-                <a href="https://github.com/IsaacJM03/PHP_Projects" target="_blank">View Repository</a>
-            </li>
-            <li>
-                <h3>Project 2: JS_Projects</h3>
-                <p>Description: Sample Javascript projects built with vanilla javascript, vue 3 and node.js .</p>
-                <a href="https://github.com/IsaacJM03/JS_Projects" target="_blank">View Repository</a>
-            </li>
-            <li>
-                <h3>Project 3: UniversityProjects(private)</h3>
-                <p>Description: A couple of assignments I've been doing as i study in university .</p>
-                <a href="https://github.com/IsaacJM03/UniversityProjects" target="_blank">View Repository</a>
-            </li>
-        </ul>
-    </section>
-
-    <section id="skills">
-        <h2>Skills</h2>
-        <p>
-          <ul>
-            <li>Programming Languages: PHP, Python, JavaScript, C</li>
-            <li>Web Development: HTML, CSS, JavaScript</li>
-            <li>Database Management: SQL, MongoDB, SQLite </li>
-            <li>Frameworks and Libraries: Node.js, Vue 3, Flask</li>
-            <li>Version Control: Git, GitHub</li>
-            <li>Data Analysis: Pandas </li>
-            <li>UI/UX Design: Figma</li>
-            <li>Problem Solving</li>
-            <li>Team Collaboration</li>
-            <li>Strong Communication Skills</li>
-            <li>Continuous Learning</li>
-        </ul>
-        </p>
-    </section>
-    
-    <section id="contact">
-        <h2>Contact</h2>
-        <p>You can reach me via email at <a href="mailto:mwesigwaisaac40@gmail.com">mwesigwaisaac40@gmail.com</a>.</p>
-        <p>LinkedIn: <a href="https://www.linkedin.com/in/isaac-mwesigwa-10bb0525a/" target="_blank">@isaac mwesigwa</a></p>
-        <p>Twitter: <a href="https://twitter.com/IsaacJM03" target="_blank">@IsaacJM03</a></p>
-    </section>
+    <script src="https://cdn.jsdelivr.net/npm/vue@3.0.5/dist/vue.global.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vuetify@3.0.5/dist/vuetify.min.js"></script>
+    <script>
+        new Vue({
+            el: '#app',
+            data: {
+                projects: [
+                    {
+                        id: 1,
+                        name: "Project 1: Beginner PHP Projects",
+                        description: "These are the sample projects I did when I was just getting to learn PHP.",
+                        link: "https://github.com/IsaacJM03/PHP_Projects"
+                    },
+                    {
+                        id: 2,
+                        name: "Project 2: JS_Projects",
+                        description: "Sample JavaScript projects built with vanilla JavaScript, Vue 3, and Node.js.",
+                        link: "https://github.com/IsaacJM03/JS_Projects"
+                    },
+                    {
+                        id: 3,
+                        name: "Project 3: UniversityProjects (private)",
+                        description: "A couple of assignments I've been doing as I study in university.",
+                        link: "https://github.com/IsaacJM03/UniversityProjects"
+                    }
+                ]
+            },
+            methods: {
+                viewRepository(link) {
+                    window.open(link, '_blank');
+                }
+            }
+        });
+    </script>
 </body>
 </html>
