@@ -1,79 +1,129 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My GitHub Portfolio</title>
-    <link rel="stylesheet" type="text/css" href="styles.css">
-    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>    
-    <link
-    href="https://cdn.jsdelivr.net/npm/vuetify@3.0.5/dist/vuetify.min.css"
-    rel="stylesheet"
-    />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@mdi/font/css/materialdesignicons.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/vuetify@3.0.5/dist/vuetify.min.css">
 </head>
 <body>
-    <script src="https://cdn.jsdelivr.net/npm/vuetify@3.0.5/dist/vuetify.min.js"></script>
-    <header>
-        <h1>Mwesigwa Isaac's GitHub Portfolio</h1>
-        <p>Welcome to my GitHub portfolio. Explore my projects and contributions.</p>
-    </header>
+    <div id="app"></div>
     
-    <section id="avatar">
-        <div class="avatar-container">
-            <img src="profile.jpg" alt="My Profile Picture">
-        </div>
-    </section>
+    <script src="https://unpkg.com/vue@3/dist/vue.global.prod.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vuetify@3.0.5/dist/vuetify.js"></script>
 
-    <section id="projects">
-        <h2>Projects</h2>
-        <ul>
-            <li>
-                <h3>Project 1: Beginner PHP Projects</h3>
-                <p>Description: These are the sample projects I did when I was just getting to learn php.</p>
-                <a href="https://github.com/IsaacJM03/PHP_Projects" target="_blank">View Repository</a>
-            </li>
-            <li>
-                <h3>Project 2: JS_Projects</h3>
-                <p>Description: Sample Javascript projects built with vanilla javascript, vue 3 and node.js .</p>
-                <a href="https://github.com/IsaacJM03/JS_Projects" target="_blank">View Repository</a>
-            </li>
-            <li>
-                <h3>Project 3: Data Structures And Algorithms work</h3>
-                <p>Description: Some practice work on the above topic in Python</p>
-                <a href="https://github.com/IsaacJM03/UniversityProjects" target="_blank">View Repository</a>
-            </li>
-            <li>
-                <h3>Project 4: UniversityProjects(private)</h3>
-                <p>Description: A couple of assignments I've been doing as i study in university .</p>
-                <a href="https://github.com/IsaacJM03/DataStructuresAndAlgorithms" target="_blank">View Repository</a>
-            </li>
-        </ul>
-    </section>
+    <script>
+        const { createApp } = Vue;
 
-    <section id="skills">
-        <h2>Skills</h2>
-        <p>
-          <ul>
-            <li>Programming Languages: PHP, Python, JavaScript, C</li>
-            <li>Web Development: HTML, CSS, JavaScript</li>
-            <li>Database Management: SQL, MongoDB, SQLite </li>
-            <li>Frameworks and Libraries: Node.js, Vue 3, Flask</li>
-            <li>Version Control: Git, GitHub</li>
-            <li>Data Analysis: Pandas </li>
-            <li>UI/UX Design: Figma</li>
-            <li>DevOps, CI/CD: Docker,GitLab</li>
-            <li>Problem Solving</li>
-            <li>Team Collaboration</li>
-            <li>Strong Communication Skills</li>
-            <li>Continuous Learning</li>
-        </ul>
-        </p>
-    </section>
-    
-    <section id="contact">
-        <h2>Contact</h2>
-        <p>You can reach me via email at <a href="mailto:mwesigwaisaac40@gmail.com">mwesigwaisaac40@gmail.com</a>.</p>
-        <p>LinkedIn: <a href="https://www.linkedin.com/in/isaac-mwesigwa-10bb0525a/" target="_blank">@isaac mwesigwa</a></p>
-        <p>Twitter: <a href="https://twitter.com/IsaacJM03" target="_blank">@IsaacJM03</a></p>
-    </section>
+        const app = createApp({
+            data() {
+                return {
+                    projects: [
+                        {
+                            name: "Project 1: Beginner PHP Projects",
+                            description: "These are the sample projects I did when I was just getting to learn PHP.",
+                            link: "https://github.com/IsaacJM03/PHP_Projects"
+                        },
+                        {
+                            name: "Project 2: JS_Projects",
+                            description: "Sample Javascript projects built with vanilla JavaScript, Vue 3, and Node.js.",
+                            link: "https://github.com/IsaacJM03/JS_Projects"
+                        },
+                        {
+                            name: "Project 3: Data Structures And Algorithms work",
+                            description: "Some practice work on the above topic in Python.",
+                            link: "https://github.com/IsaacJM03/DataStructuresAndAlgorithms"
+                        },
+                        {
+                            name: "Project 4: UniversityProjects(private)",
+                            description: "A couple of assignments I've been doing as I study in university.",
+                            link: "https://github.com/IsaacJM03/UniversityProjects"
+                        }
+                    ],
+                    skills: [
+                        "Programming Languages: PHP, Python, JavaScript, C",
+                        "Web Development: HTML, CSS, JavaScript",
+                        "Database Management: SQL, MongoDB, SQLite",
+                        "Frameworks and Libraries: Node.js, Vue 3, Flask",
+                        "Version Control: Git, GitHub",
+                        "Data Analysis: Pandas",
+                        "UI/UX Design: Figma",
+                        "DevOps: Docker",
+                        "CI/CD: GitLab",
+                        "Problem Solving",
+                        "Team Collaboration",
+                        "Strong Communication Skills",
+                        "Continuous Learning"
+                    ]
+                };
+            },
+            template: `
+                <v-app>
+                    <v-container>
+                        <v-row>
+                            <v-col>
+                                <header>
+                                    <h1>Mwesigwa Isaac's GitHub Portfolio</h1>
+                                    <p>Welcome to my GitHub portfolio. Explore my projects and contributions.</p>
+                                </header>
+                            </v-col>
+                        </v-row>
+
+                        <v-row>
+                            <v-col>
+                                <section id="avatar">
+                                    <div class="avatar-container">
+                                        <img src="profile.jpg" alt="My Profile Picture">
+                                    </div>
+                                </section>
+                            </v-col>
+                        </v-row>
+
+                        <v-row>
+                            <v-col>
+                                <section id="projects">
+                                    <h2>Projects</h2>
+                                    <ul>
+                                        <li v-for="project in projects" :key="project.name">
+                                            <h3>{{ project.name }}</h3>
+                                            <p>{{ project.description }}</p>
+                                            <a :href="project.link" target="_blank">View Repository</a>
+                                        </li>
+                                    </ul>
+                                </section>
+                            </v-col>
+                        </v-row>
+
+                        <v-row>
+                            <v-col>
+                                <section id="skills">
+                                    <h2>Skills</h2>
+                                    <ul>
+                                        <li v-for="skill in skills" :key="skill">{{ skill }}</li>
+                                    </ul>
+                                </section>
+                            </v-col>
+                        </v-row>
+
+                        <v-row>
+                            <v-col>
+                                <section id="contact">
+                                    <h2>Contact</h2>
+                                    <p>You can reach me via email at <a href="mailto:mwesigwaisaac40@gmail.com">mwesigwaisaac40@gmail.com</a>.</p>
+                                    <p>LinkedIn: <a href="https://www.linkedin.com/in/isaac-mwesigwa-10bb0525a/" target="_blank">@isaac mwesigwa</a></p>
+                                    <p>Twitter: <a href="https://twitter.com/IsaacJM03" target="_blank">@IsaacJM03</a></p>
+                                </section>
+                            </v-col>
+                        </v-row>
+                    </v-container>
+                </v-app>
+            `
+        });
+
+        app.use(Vuetify);
+
+        app.mount("#app");
+    </script>
 </body>
 </html>
