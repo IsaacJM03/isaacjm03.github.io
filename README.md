@@ -1,39 +1,148 @@
-# My GitHub Portfolio
+# Isaac Mwesigwa - Developer Portfolio
 
-Welcome to my GitHub portfolio! Here, you'll find a collection of my projects, code repositories, and contributions. Feel free to explore and see what I've been working on.
+[![Portfolio Website](https://img.shields.io/badge/Portfolio-Live-brightgreen)](https://isaacjm03.github.io)
+[![GitHub](https://img.shields.io/badge/GitHub-IsaacJM03-blue)](https://github.com/IsaacJM03)
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-Connect-0077B5)](https://www.linkedin.com/in/isaac-mwesigwa-10bb0525a/)
 
-## Projects
+Welcome to my personal portfolio website! This is a modern, interactive showcase of my projects, skills, and professional experience as a Full Stack Developer and Machine Learning Enthusiast.
 
-Here are some of my notable projects:
+## 🌟 Features
 
-### Project 1: PHP_Projects
-- Description: Beginner PHP Projects worked on earlier.
-- Repository: [Link to the repository](https://github.com/IsaacJM03/PHP_Projects)
+- **Responsive Design**: Fully optimized for desktop, tablet, and mobile devices
+- **Interactive UI**: Smooth animations, 3D card effects, and dynamic hover states
+- **Modern Aesthetics**: Clean, professional design with gradient accents and dark theme
+- **Performance Optimized**: Fast loading times with optimized assets and efficient code
+- **Accessibility**: Semantic HTML and keyboard-navigable interface
 
-### Project 2: JavaScript Projects
-- Description: Some JavaScript projects worked on with node.js and Vue 3.
-- Repository: [Link to the repository](https://github.com/IsaacJM03/JS_Projects)
+## 🚀 Technologies Used
 
-## Skills
+### Frontend
+- **HTML5**: Semantic markup for better accessibility
+- **CSS3**: Modern styling with CSS Grid, Flexbox, and custom properties
+- **JavaScript (ES6+)**: Interactive features and animations
+- **SVG**: Scalable vector icons for crisp visuals
 
-  Here are some of my key skills:
-  
-  - Programming Languages: PHP, Python, JavaScript,C
-  - Web Development: HTML, CSS, JavaScript
-  - Database Management: SQL, MongoDB
-  - Frameworks and Libraries: Node.js, Vue 3, Flask
-  - Version Control: Git, GitHub
-  - Data Analysis: Pandas
-  - UI/UX Design: Figma
-  - Problem Solving
-  - Team Collaboration
-  - Strong Communication Skills
-  - Continuous Learning
+### Design Features
+- Custom CSS animations and transitions
+- 3D tilt effects on cards
+- Parallax scrolling effects
+- Cursor trail animation
+- Scroll progress indicator
+- Dynamic gradient backgrounds
+- Intersection Observer API for scroll animations
 
+## 📂 Project Structure
 
-## Contact
+```
+isaacjm03.github.io/
+├── index.html          # Main HTML file with portfolio content
+├── styles.css          # All styling and animations
+├── script.js           # Interactive features and effects
+├── profile.jpg         # Profile picture
+└── README.md           # Project documentation
+```
 
-- You can reach me via email at [mwesigwaisaac40@gmail.com](mailto:mwesigwaisaac40@gmail.com).
-- LinkedIn: [@isaac mwesigwa](https://www.linkedin.com/in/isaac-mwesigwa-10bb0525a/)
-- Twitter: [@IsaacJM03](https://twitter.com/IsaacJM03)
+## 🎨 Key Sections
 
+### Hero Section
+- Eye-catching introduction with animated profile picture
+- Gradient text effects
+- Quick links to GitHub, LinkedIn, and contact information
+
+### Featured Projects
+- Highlighted projects with detailed descriptions
+- Technology tags for quick reference
+- Direct links to live demos and repositories
+
+### Skills & Technologies
+- Organized by category (Languages, Web Dev, ML, Tools, Databases)
+- Interactive hover effects
+- Comprehensive overview of technical expertise
+
+### Contact
+- Multiple ways to get in touch
+- Professional social media links
+- Email contact with beautiful icons
+
+## 💡 Highlighted Projects
+
+### Football Player Recognition
+Advanced machine learning model trained on 42,000+ images from the 2022 World Cup, using microsoft/resnet-18 architecture with deployed inference API.
+
+### ML Projects
+Comprehensive collection of machine learning implementations from Stanford University's ML course, demonstrating practical applications of core concepts.
+
+### JavaScript Projects
+Modern full-stack applications built with vanilla JavaScript, Vue 3, and Node.js, showcasing contemporary web development practices.
+
+## 🛠️ Local Development
+
+To view this website locally:
+
+1. Clone the repository:
+```bash
+git clone https://github.com/IsaacJM03/isaacjm03.github.io.git
+```
+
+2. Navigate to the project directory:
+```bash
+cd isaacjm03.github.io
+```
+
+3. Open `index.html` in your browser:
+```bash
+# On macOS
+open index.html
+
+# On Linux
+xdg-open index.html
+
+# On Windows
+start index.html
+```
+
+Alternatively, use a local server for the best experience:
+```bash
+# Using Python 3
+python -m http.server 8000
+
+# Using Node.js http-server
+npx http-server
+```
+
+Then visit `http://localhost:8000` in your browser.
+
+## 📱 Browser Support
+
+- Chrome/Edge (latest)
+- Firefox (latest)
+- Safari (latest)
+- Mobile browsers (iOS Safari, Chrome Mobile)
+
+## 🎯 Performance
+
+- Lightweight: < 200KB total size (excluding images)
+- Fast loading: Optimized CSS and JavaScript
+- Smooth animations: Hardware-accelerated transforms
+- Efficient code: Throttled event listeners and object pooling
+
+## 📝 License
+
+This project is open source and available for educational purposes. Feel free to fork and customize for your own portfolio!
+
+## 📧 Contact
+
+- **Email**: [mwesigwaisaac40@gmail.com](mailto:mwesigwaisaac40@gmail.com)
+- **LinkedIn**: [Isaac Mwesigwa](https://www.linkedin.com/in/isaac-mwesigwa-10bb0525a/)
+- **Twitter**: [@IsaacJM03](https://twitter.com/IsaacJM03)
+- **GitHub**: [@IsaacJM03](https://github.com/IsaacJM03)
+
+## 🙏 Acknowledgments
+
+- Icons: Custom SVG designs
+- Fonts: System font stack for optimal performance
+- Color Palette: Custom gradient-based design system
+
+---
+
+**Built with ❤️ by Isaac Mwesigwa** | Last Updated: January 2026
