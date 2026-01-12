@@ -12,6 +12,22 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     });
 });
 
+// Enhanced typing effect for hero title
+function typeWriter(element, text, speed = 100) {
+    let i = 0;
+    element.textContent = '';
+    element.style.opacity = '1';
+    
+    function type() {
+        if (i < text.length) {
+            element.textContent += text.charAt(i);
+            i++;
+            setTimeout(type, speed);
+        }
+    }
+    type();
+}
+
 // Intersection Observer for scroll animations
 const observerOptions = {
     threshold: 0.1,
@@ -38,16 +54,24 @@ document.addEventListener('DOMContentLoaded', () => {
         observer.observe(el);
     });
 
-    // Add parallax effect to hero with throttling
+    // Parallax effect for avatar on scroll
     let ticking = false;
     window.addEventListener('scroll', () => {
         if (!ticking) {
             window.requestAnimationFrame(() => {
                 const scrolled = window.pageYOffset;
                 const hero = document.querySelector('.hero');
+                const avatar = document.querySelector('.avatar-container');
+                
                 if (hero && scrolled < window.innerHeight) {
                     hero.style.transform = `translateY(${scrolled * 0.5}px)`;
                 }
+                
+                if (avatar && scrolled < window.innerHeight) {
+                    const rotation = scrolled * 0.1;
+                    avatar.style.transform = `translateY(-${scrolled * 0.3}px) rotate(${rotation}deg)`;
+                }
+                
                 ticking = false;
             });
             ticking = true;
@@ -77,9 +101,60 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
+    // Add 3D tilt effect to cards
+    const cards = document.querySelectorAll('.project-card, .skill-category');
+    cards.forEach(card => {
+        card.addEventListener('mousemove', function(e) {
+            const rect = card.getBoundingClientRect();
+            const x = e.clientX - rect.left;
+            const y = e.clientY - rect.top;
+            
+            const centerX = rect.width / 2;
+            const centerY = rect.height / 2;
+            
+            const rotateX = (y - centerY) / 20;
+            const rotateY = (centerX - x) / 20;
+            
+            card.style.transform = `perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) translateZ(10px)`;
+        });
+        
+        card.addEventListener('mouseleave', function() {
+            card.style.transform = 'perspective(1000px) rotateX(0) rotateY(0) translateZ(0)';
+        });
+    });
+
+    // Animated skill bars on hover
+    const skillItems = document.querySelectorAll('.skill-item');
+    skillItems.forEach((item, index) => {
+        item.style.animationDelay = `${index * 0.05}s`;
+        
+        item.addEventListener('mouseenter', function() {
+            this.style.transform = 'scale(1.1) translateY(-2px)';
+        });
+        
+        item.addEventListener('mouseleave', function() {
+            this.style.transform = 'scale(1) translateY(0)';
+        });
+    });
+
+    // Dynamic gradient background that follows mouse
+    const sections = document.querySelectorAll('section');
+    sections.forEach(section => {
+        section.addEventListener('mousemove', (e) => {
+            const rect = section.getBoundingClientRect();
+            const x = ((e.clientX - rect.left) / rect.width) * 100;
+            const y = ((e.clientY - rect.top) / rect.height) * 100;
+            
+            section.style.background = `
+                radial-gradient(circle at ${x}% ${y}%, rgba(255, 70, 85, 0.05) 0%, transparent 50%),
+                ${section.style.backgroundColor || getComputedStyle(section).backgroundColor}
+            `;
+        });
+    });
+
     // Add stagger animation to project cards
-    const cards = document.querySelectorAll('.project-card');
-    cards.forEach((card, index) => {
+    const projectCards = document.querySelectorAll('.project-card');
+    projectCards.forEach((card, index) => {
         card.style.animationDelay = `${index * 0.1}s`;
     });
 
