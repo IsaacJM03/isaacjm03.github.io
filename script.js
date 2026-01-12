@@ -79,8 +79,9 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     // Add hover effect sound (visual feedback)
-    const projectCards = document.querySelectorAll('.project-card');
-    projectCards.forEach(card => {
+    // Project cards stagger animation is set below
+    const allProjectCards = document.querySelectorAll('.project-card');
+    allProjectCards.forEach(card => {
         card.addEventListener('mouseenter', function() {
             this.style.transition = 'all 0.3s cubic-bezier(0.4, 0, 0.2, 1)';
         });
@@ -153,8 +154,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     // Add stagger animation to project cards
-    const projectCards = document.querySelectorAll('.project-card');
-    projectCards.forEach((card, index) => {
+    allProjectCards.forEach((card, index) => {
         card.style.animationDelay = `${index * 0.1}s`;
     });
 
