@@ -141,6 +141,9 @@ document.addEventListener('DOMContentLoaded', () => {
     // Dynamic gradient background that follows mouse
     const sections = document.querySelectorAll('section');
     sections.forEach(section => {
+        // Cache the background color for better performance
+        const cachedBgColor = getComputedStyle(section).backgroundColor;
+        
         section.addEventListener('mousemove', (e) => {
             const rect = section.getBoundingClientRect();
             const x = ((e.clientX - rect.left) / rect.width) * 100;
@@ -148,7 +151,7 @@ document.addEventListener('DOMContentLoaded', () => {
             
             section.style.background = `
                 radial-gradient(circle at ${x}% ${y}%, rgba(255, 70, 85, 0.05) 0%, transparent 50%),
-                ${section.style.backgroundColor || getComputedStyle(section).backgroundColor}
+                ${cachedBgColor}
             `;
         });
     });
