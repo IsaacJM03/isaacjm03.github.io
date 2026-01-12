@@ -38,12 +38,19 @@ document.addEventListener('DOMContentLoaded', () => {
         observer.observe(el);
     });
 
-    // Add parallax effect to hero
+    // Add parallax effect to hero with throttling
+    let ticking = false;
     window.addEventListener('scroll', () => {
-        const scrolled = window.pageYOffset;
-        const hero = document.querySelector('.hero');
-        if (hero && scrolled < window.innerHeight) {
-            hero.style.transform = `translateY(${scrolled * 0.5}px)`;
+        if (!ticking) {
+            window.requestAnimationFrame(() => {
+                const scrolled = window.pageYOffset;
+                const hero = document.querySelector('.hero');
+                if (hero && scrolled < window.innerHeight) {
+                    hero.style.transform = `translateY(${scrolled * 0.5}px)`;
+                }
+                ticking = false;
+            });
+            ticking = true;
         }
     });
 
@@ -106,32 +113,41 @@ document.addEventListener('DOMContentLoaded', () => {
     }, 100);
 });
 
-// Add cursor trail effect (optional - can be removed if too much)
-let cursorTrail = [];
+// Add cursor trail effect with object pooling for better performance
+const trailPool = [];
 const maxTrailLength = 20;
+let lastTrailTime = 0;
+const trailInterval = 50; // Only create trail every 50ms
 
 document.addEventListener('mousemove', (e) => {
     if (window.innerWidth > 768) { // Only on desktop
-        const trail = document.createElement('div');
-        trail.className = 'cursor-trail';
-        trail.style.left = e.pageX + 'px';
-        trail.style.top = e.pageY + 'px';
-        document.body.appendChild(trail);
+        const now = Date.now();
+        if (now - lastTrailTime < trailInterval) return;
+        lastTrailTime = now;
 
-        cursorTrail.push(trail);
+        let trailObj = trailPool.find(t => !t.active);
         
-        if (cursorTrail.length > maxTrailLength) {
-            const oldTrail = cursorTrail.shift();
-            oldTrail.remove();
+        if (!trailObj) {
+            const trailElement = document.createElement('div');
+            trailElement.className = 'cursor-trail';
+            document.body.appendChild(trailElement);
+            trailObj = { element: trailElement, active: false };
+            trailPool.push(trailObj);
         }
+        
+        trailObj.active = true;
+        trailObj.element.style.left = e.pageX + 'px';
+        trailObj.element.style.top = e.pageY + 'px';
+        trailObj.element.style.opacity = '1';
+        trailObj.element.style.transform = 'scale(1)';
 
         setTimeout(() => {
-            trail.style.opacity = '0';
-            trail.style.transform = 'scale(0)';
+            trailObj.element.style.opacity = '0';
+            trailObj.element.style.transform = 'scale(0)';
         }, 50);
 
         setTimeout(() => {
-            trail.remove();
+            trailObj.active = false;
         }, 500);
     }
 });
