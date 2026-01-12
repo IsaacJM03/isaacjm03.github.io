@@ -455,18 +455,6 @@ html {
     transform: scale(1.2) rotate(5deg);
 }
 
-.contact-icon svg {
-    width: 24px;
-    height: 24px;
-    color: var(--primary-color);
-    transition: var(--transition);
-}
-
-.contact-link:hover .contact-icon svg {
-    color: white;
-    transform: scale(1.2) rotate(5deg);
-}
-
 /* Enhanced Interactive Elements */
 .skill-item {
     position: relative;
