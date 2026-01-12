@@ -6,7 +6,7 @@
 
 Welcome to my personal portfolio website! This is a modern, interactive showcase of my projects, skills, and professional experience as a Full Stack Developer and Machine Learning Enthusiast.
 
-## 🌟 Features
+## Features
 
 - **Responsive Design**: Fully optimized for desktop, tablet, and mobile devices
 - **Interactive UI**: Smooth animations, 3D card effects, and dynamic hover states
@@ -14,7 +14,7 @@ Welcome to my personal portfolio website! This is a modern, interactive showcase
 - **Performance Optimized**: Fast loading times with optimized assets and efficient code
 - **Accessibility**: Semantic HTML and keyboard-navigable interface
 
-## 🚀 Technologies Used
+## Technologies Used
 
 ### Frontend
 - **HTML5**: Semantic markup for better accessibility
@@ -31,18 +31,7 @@ Welcome to my personal portfolio website! This is a modern, interactive showcase
 - Dynamic gradient backgrounds
 - Intersection Observer API for scroll animations
 
-## 📂 Project Structure
-
-```
-isaacjm03.github.io/
-├── index.html          # Main HTML file with portfolio content
-├── styles.css          # All styling and animations
-├── script.js           # Interactive features and effects
-├── profile.jpg         # Profile picture
-└── README.md           # Project documentation
-```
-
-## 🎨 Key Sections
+## Key Sections
 
 ### Hero Section
 - Eye-catching introduction with animated profile picture
@@ -75,58 +64,8 @@ Comprehensive collection of machine learning implementations from Stanford Unive
 ### JavaScript Projects
 Modern full-stack applications built with vanilla JavaScript, Vue 3, and Node.js, showcasing contemporary web development practices.
 
-## 🛠️ Local Development
 
-To view this website locally:
-
-1. Clone the repository:
-```bash
-git clone https://github.com/IsaacJM03/isaacjm03.github.io.git
-```
-
-2. Navigate to the project directory:
-```bash
-cd isaacjm03.github.io
-```
-
-3. Open `index.html` in your browser:
-```bash
-# On macOS
-open index.html
-
-# On Linux
-xdg-open index.html
-
-# On Windows
-start index.html
-```
-
-Alternatively, use a local server for the best experience:
-```bash
-# Using Python 3
-python -m http.server 8000
-
-# Using Node.js http-server
-npx http-server
-```
-
-Then visit `http://localhost:8000` in your browser.
-
-## 📱 Browser Support
-
-- Chrome/Edge (latest)
-- Firefox (latest)
-- Safari (latest)
-- Mobile browsers (iOS Safari, Chrome Mobile)
-
-## 🎯 Performance
-
-- Lightweight: < 200KB total size (excluding images)
-- Fast loading: Optimized CSS and JavaScript
-- Smooth animations: Hardware-accelerated transforms
-- Efficient code: Throttled event listeners and object pooling
-
-## 📝 License
+## License
 
 This project is open source and available for educational purposes. Feel free to fork and customize for your own portfolio!
 
@@ -137,7 +76,7 @@ This project is open source and available for educational purposes. Feel free to
 - **Twitter**: [@IsaacJM03](https://twitter.com/IsaacJM03)
 - **GitHub**: [@IsaacJM03](https://github.com/IsaacJM03)
 
-## 🙏 Acknowledgments
+## Acknowledgments
 
 - Icons: Custom SVG designs
 - Fonts: System font stack for optimal performance
