@@ -691,10 +691,12 @@ html {
         flex-direction: column;
         width: 100%;
         max-width: 300px;
+        align-items: stretch;
     }
     
     .hero-link {
         width: 100%;
+        text-align: center;
     }
     
     .section-title {
