@@ -1,85 +1,201 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>My GitHub Portfolio</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Isaac Mwesigwa - Developer Portfolio</title>
     <link rel="stylesheet" type="text/css" href="styles.css">
 </head>
 <body>
-    <header>
-        <h1>Mwesigwa Isaac's GitHub Portfolio</h1>
-        <p>Welcome to my GitHub portfolio. Explore my projects and contributions.</p>
-    </header>
-    
-    <section id="avatar">
-        <div class="avatar-container">
-            <img src="profile.jpg" alt="My Profile Picture">
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <div class="avatar-container">
+                <img src="profile.jpg" alt="Isaac Mwesigwa" class="avatar-img">
+            </div>
+            <h1 class="hero-title">Isaac Mwesigwa</h1>
+            <p class="hero-subtitle">Full Stack Developer & Machine Learning Enthusiast</p>
+            <div class="hero-links">
+                <a href="https://github.com/IsaacJM03" target="_blank" class="hero-link">GitHub</a>
+                <a href="https://www.linkedin.com/in/isaac-mwesigwa-10bb0525a/" target="_blank" class="hero-link">LinkedIn</a>
+                <a href="mailto:mwesigwaisaac40@gmail.com" class="hero-link">Contact</a>
+            </div>
+        </div>
+        <div class="scroll-indicator">
+            <div class="scroll-arrow"></div>
         </div>
     </section>
 
-    <section id="projects">
-        <h2>Projects</h2>
-        <ul>
-            <li>
-                <h3>Project 1: Beginner PHP Projects</h3>
-                <p>Description: These are the sample projects I did when I was just getting to learn php.</p>
-                <a href="https://github.com/IsaacJM03/PHP_Projects" target="_blank">View Repository</a>
-            </li>
-            <li>
-                <h3>Project 2: JS_Projects</h3>
-                <p>Description: Sample Javascript projects built with vanilla javascript, vue 3 and node.js .</p>
-                <a href="https://github.com/IsaacJM03/JS_Projects" target="_blank">View Repository</a>
-            </li>
-            <li>
-                <h3>Project 3: Data Structures And Algorithms work</h3>
-                <p>Description: Some practice work on the above topic in Python</p>
-                <a href="https://github.com/IsaacJM03/DataStructuresAndAlgorithms" target="_blank">View Repository</a>
-            </li>
-            <li>
-                <h3>Project 4: UniversityProjects(private)</h3>
-                <p>Description: A couple of assignments I've been doing as i study in university .</p>
-                <a href="https://github.com/IsaacJM03/UniversityProjects" target="_blank">View Repository</a>
-            </li>
-            <li>
-                <h3>Project 5: MLProjects(public)</h3>
-                <p>Description: Projects I've been working on as I took a Stanford University course on Machine Learning online</p>
-                <a href="https://github.com/IsaacJM03/MLProjects" target="_blank">View Repository</a>
-            </li>
-            <li>
-                <h2>Additional projects:</h2>
-                <h3>Project 1: Football/soccer player image classification</h3>
-                <p>Description: I refactored and auto-trained the microsoft/resnet-18 image classification model on a dataset of 42,000 pictures from players who participated in the 2022 World Cup. Model can be used using the inference API</p>
-                <a href="https://huggingface.co/IsaacMwesigwa/footballer-recognition-3" target="_blank">Use Model</a>
-            </li>           
-        </ul>
+    <!-- Pinned Projects Section -->
+    <section class="pinned-projects">
+        <div class="container">
+            <h2 class="section-title">Featured Projects</h2>
+            <div class="projects-grid pinned">
+                <div class="project-card featured">
+                    <div class="project-icon">🤖</div>
+                    <h3 class="project-title">Football Player Recognition</h3>
+                    <p class="project-description">Refactored and auto-trained microsoft/resnet-18 model on 42,000+ images from 2022 World Cup players. Deployed with inference API.</p>
+                    <div class="project-tags">
+                        <span class="tag">Machine Learning</span>
+                        <span class="tag">PyTorch</span>
+                        <span class="tag">Computer Vision</span>
+                    </div>
+                    <a href="https://huggingface.co/IsaacMwesigwa/footballer-recognition-3" target="_blank" class="project-link">
+                        View Model →
+                    </a>
+                </div>
+                <div class="project-card featured">
+                    <div class="project-icon">🧠</div>
+                    <h3 class="project-title">ML Projects</h3>
+                    <p class="project-description">Collection of machine learning projects developed during Stanford University's ML course. Practical implementations of core ML concepts.</p>
+                    <div class="project-tags">
+                        <span class="tag">Python</span>
+                        <span class="tag">TensorFlow</span>
+                        <span class="tag">Keras</span>
+                    </div>
+                    <a href="https://github.com/IsaacJM03/MLProjects" target="_blank" class="project-link">
+                        View Repository →
+                    </a>
+                </div>
+                <div class="project-card featured">
+                    <div class="project-icon">⚡</div>
+                    <h3 class="project-title">JavaScript Projects</h3>
+                    <p class="project-description">Modern JavaScript applications built with vanilla JS, Vue 3, and Node.js. Showcasing full-stack capabilities.</p>
+                    <div class="project-tags">
+                        <span class="tag">JavaScript</span>
+                        <span class="tag">Vue 3</span>
+                        <span class="tag">Node.js</span>
+                    </div>
+                    <a href="https://github.com/IsaacJM03/JS_Projects" target="_blank" class="project-link">
+                        View Repository →
+                    </a>
+                </div>
+            </div>
+        </div>
     </section>
 
-    <section id="skills">
-        <h2>Skills</h2>
-        <p>
-          <ul>
-            <li>Programming Languages: PHP, Python, JavaScript, C</li>
-            <li>Web Development: HTML, CSS, JavaScript</li>
-            <li>Database Management: SQL, MongoDB, SQLite </li>
-            <li>Frameworks and Libraries: Node.js, Vue 3, Flask</li>
-            <li>Version Control: Git, GitHub</li>
-            <li>Data Analysis: Pandas,Matplotlib </li>
-            <li>Artificial Intelligence and Machine Learning: PyTorch, Tensorflow, Keras</li>
-            <li>UI/UX Design: Figma</li>
-            <li>DevOps, CI/CD: Docker,GitLab</li>
-            <li>Problem Solving</li>
-            <li>Team Collaboration</li>
-            <li>Strong Communication Skills</li>
-            <li>Continuous Learning</li>
-        </ul>
-        </p>
+    <!-- All Projects Section -->
+    <section class="all-projects">
+        <div class="container">
+            <h2 class="section-title">More Projects</h2>
+            <div class="projects-grid">
+                <div class="project-card">
+                    <div class="project-icon">📊</div>
+                    <h3 class="project-title">Data Structures & Algorithms</h3>
+                    <p class="project-description">Practice implementations and solutions for various data structures and algorithms in Python.</p>
+                    <div class="project-tags">
+                        <span class="tag">Python</span>
+                        <span class="tag">Algorithms</span>
+                    </div>
+                    <a href="https://github.com/IsaacJM03/DataStructuresAndAlgorithms" target="_blank" class="project-link">
+                        View Repository →
+                    </a>
+                </div>
+                <div class="project-card">
+                    <div class="project-icon">🎓</div>
+                    <h3 class="project-title">University Projects</h3>
+                    <p class="project-description">Academic assignments and projects completed during university studies.</p>
+                    <div class="project-tags">
+                        <span class="tag">Academic</span>
+                        <span class="tag">Various</span>
+                    </div>
+                    <a href="https://github.com/IsaacJM03/UniversityProjects" target="_blank" class="project-link">
+                        View Repository →
+                    </a>
+                </div>
+                <div class="project-card">
+                    <div class="project-icon">🐘</div>
+                    <h3 class="project-title">PHP Projects</h3>
+                    <p class="project-description">Beginner PHP projects developed while learning server-side programming fundamentals.</p>
+                    <div class="project-tags">
+                        <span class="tag">PHP</span>
+                        <span class="tag">Web Dev</span>
+                    </div>
+                    <a href="https://github.com/IsaacJM03/PHP_Projects" target="_blank" class="project-link">
+                        View Repository →
+                    </a>
+                </div>
+            </div>
+        </div>
     </section>
-    
-    <section id="contact">
-        <h2>Contact</h2>
-        <p>You can reach me via email at <a href="mailto:mwesigwaisaac40@gmail.com">mwesigwaisaac40@gmail.com</a>.</p>
-        <p>LinkedIn: <a href="https://www.linkedin.com/in/isaac-mwesigwa-10bb0525a/" target="_blank">@isaac mwesigwa</a></p>
-        <p>Twitter: <a href="https://twitter.com/IsaacJM03" target="_blank">@IsaacJM03</a></p>
+
+    <!-- Skills Section -->
+    <section class="skills-section">
+        <div class="container">
+            <h2 class="section-title">Skills & Technologies</h2>
+            <div class="skills-grid">
+                <div class="skill-category">
+                    <h3 class="skill-category-title">Languages</h3>
+                    <div class="skill-items">
+                        <span class="skill-item">Python</span>
+                        <span class="skill-item">JavaScript</span>
+                        <span class="skill-item">PHP</span>
+                        <span class="skill-item">C</span>
+                    </div>
+                </div>
+                <div class="skill-category">
+                    <h3 class="skill-category-title">Web Development</h3>
+                    <div class="skill-items">
+                        <span class="skill-item">HTML/CSS</span>
+                        <span class="skill-item">Vue 3</span>
+                        <span class="skill-item">Node.js</span>
+                        <span class="skill-item">Flask</span>
+                    </div>
+                </div>
+                <div class="skill-category">
+                    <h3 class="skill-category-title">AI & Machine Learning</h3>
+                    <div class="skill-items">
+                        <span class="skill-item">PyTorch</span>
+                        <span class="skill-item">TensorFlow</span>
+                        <span class="skill-item">Keras</span>
+                        <span class="skill-item">Pandas</span>
+                    </div>
+                </div>
+                <div class="skill-category">
+                    <h3 class="skill-category-title">Tools & Platforms</h3>
+                    <div class="skill-items">
+                        <span class="skill-item">Git/GitHub</span>
+                        <span class="skill-item">Docker</span>
+                        <span class="skill-item">GitLab CI/CD</span>
+                        <span class="skill-item">Figma</span>
+                    </div>
+                </div>
+                <div class="skill-category">
+                    <h3 class="skill-category-title">Databases</h3>
+                    <div class="skill-items">
+                        <span class="skill-item">SQL</span>
+                        <span class="skill-item">MongoDB</span>
+                        <span class="skill-item">SQLite</span>
+                    </div>
+                </div>
+            </div>
+        </div>
     </section>
+
+    <!-- Contact Section -->
+    <section class="contact-section">
+        <div class="container">
+            <h2 class="section-title">Get In Touch</h2>
+            <div class="contact-content">
+                <p class="contact-text">Interested in collaborating or have a project in mind? Let's connect!</p>
+                <div class="contact-links">
+                    <a href="mailto:mwesigwaisaac40@gmail.com" class="contact-link">
+                        <span class="contact-icon">✉️</span>
+                        mwesigwaisaac40@gmail.com
+                    </a>
+                    <a href="https://www.linkedin.com/in/isaac-mwesigwa-10bb0525a/" target="_blank" class="contact-link">
+                        <span class="contact-icon">💼</span>
+                        LinkedIn Profile
+                    </a>
+                    <a href="https://twitter.com/IsaacJM03" target="_blank" class="contact-link">
+                        <span class="contact-icon">🐦</span>
+                        @IsaacJM03
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script src="script.js"></script>
 </body>
 </html>
