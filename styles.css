@@ -691,6 +691,7 @@ html {
         flex-direction: column;
         width: 100%;
         max-width: 300px;
+        margin: 0 auto;
         align-items: center;
     }
     
